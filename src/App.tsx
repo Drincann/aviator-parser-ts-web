@@ -144,7 +144,7 @@ for i in range(0, 5) {
           <span style={{ fontSize: '0.9rem', color: '#888' }}>
             JS Runtime for <a href="https://github.com/killme2008/aviatorscript" target="_blank">AviatorScript</a>
           </span>
-          <a href="https://github.com/Drincann/aviator-parser" target="_blank">GitHub</a>
+          <a href="https://github.com/Drincann/aviator-parser-ts" target="_blank">GitHub</a>
         </div>
       </header>
 
