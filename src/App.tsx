@@ -103,7 +103,28 @@ for i in range(0, 5) {
 
         const result = aviator.execute(code, context);
         
-        setOutput([...currentOutput, `\nResult: ${result}`]);
+        // Handle ControlFlowSignal (return statements)
+        let displayResult = result;
+        if (result && typeof result === 'object' && 'type' in result && result.type === 'return') {
+          displayResult = result.value;
+        }
+        
+        // Format result for display
+        let resultStr = '';
+        if (displayResult === null || displayResult === undefined) {
+          resultStr = 'null';
+        } else if (typeof displayResult === 'object') {
+          // Try to stringify objects nicely
+          try {
+            resultStr = JSON.stringify(displayResult, null, 2);
+          } catch {
+            resultStr = String(displayResult);
+          }
+        } else {
+          resultStr = String(displayResult);
+        }
+        
+        setOutput([...currentOutput, `\nResult: ${resultStr}`]);
       } catch (e: any) {
         setOutput(prev => [...prev, `\nError: ${e.message}`]);
       } finally {
