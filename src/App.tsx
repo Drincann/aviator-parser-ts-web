@@ -138,7 +138,7 @@ for i in range(0, 5) {
       <header className="header">
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <h1>AviatorScript Web</h1>
-          <span className="version-badge">v0.3.3</span>
+          <span className="version-badge">v0.3.5</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <span style={{ fontSize: '0.9rem', color: '#888' }}>
