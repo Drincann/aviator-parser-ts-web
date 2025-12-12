@@ -59,6 +59,7 @@ for i in range(0, 5) {
     try {
       const analyzer = new StaticAnalyzer();
       const diagnostics = analyzer.analyze(value);
+      console.log(diagnostics);
       
       const markers = diagnostics.map(d => ({
         startLineNumber: d.line,
